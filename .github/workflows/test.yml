@@ -18,7 +18,7 @@ jobs:
 
       - name: Install goose
         run: |
-          GOBIN=/usr/local/bin go install -tags='no_postgres no_clickhouse no_mssql' github.com/pressly/goose/v3/cmd/goose@latest
+          GOBIN=/usr/local/bin go install -tags='no_clickhouse no_mssql no_postgres no_sqlite3 no_libsql no_vertica no_ydb' github.com/pressly/goose/v3/cmd/goose@latest
           #curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh
           goose --version
 
