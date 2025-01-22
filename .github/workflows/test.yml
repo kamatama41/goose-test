@@ -14,12 +14,12 @@ jobs:
       - name: Up DB
         run: |
           docker compose up -d
-          sleep 5
+          sleep 15
 
       - name: Install goose
         run: |
-          GOBIN=/usr/local/bin go install -tags='no_clickhouse no_mssql no_postgres no_sqlite3 no_libsql no_vertica no_ydb' github.com/pressly/goose/v3/cmd/goose@latest
-          #curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh
+          #GOBIN=/usr/local/bin go install -tags='no_clickhouse no_mssql no_postgres no_sqlite3 no_libsql no_vertica no_ydb' github.com/pressly/goose/v3/cmd/goose@latest
+          curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh
           goose --version
 
       - name: Run migration
