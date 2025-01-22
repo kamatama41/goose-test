@@ -13,8 +13,7 @@ jobs:
 
       - name: Up DB
         run: |
-          docker compose up -d
-          sleep 15
+          docker compose up -d --wait
 
       - name: Install goose
         run: |
