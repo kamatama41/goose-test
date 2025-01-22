@@ -17,7 +17,7 @@ jobs:
 
       - name: Install goose
         run: |
-          GOBIN=/user/local/bin go install github.com/pressly/goose/v3/cmd/goose@latest
+          GOBIN=/usr/local/bin go install github.com/pressly/goose/v3/cmd/goose@latest
           #curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh
           goose --version
 
