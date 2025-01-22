@@ -17,8 +17,8 @@ jobs:
 
       - name: Install goose
         run: |
-          GOBIN=/usr/local/bin go install github.com/pressly/goose/v3/cmd/goose@latest
-          #curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh
+          #GOBIN=/usr/local/bin go install github.com/pressly/goose/v3/cmd/goose@latest
+          curl -fsSL https://raw.githubusercontent.com/pressly/goose/master/install.sh | sh
           goose --version
 
       - name: Run migration
